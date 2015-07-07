@@ -1,4 +1,4 @@
-# Djinni
+# Djinni 
 
 Djinni is a tool for generating cross-language type declarations and interface bindings. It's
 designed to connect C++ with either Java or Objective-C.
