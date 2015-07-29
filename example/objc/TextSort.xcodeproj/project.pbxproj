@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		205B641C1B68E249006F9664 /* MyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B641B1B68E249006F9664 /* MyViewController.swift */; };
+		205B64231B68E92D006F9664 /* TXSToets.m in Sources */ = {isa = PBXBuildFile; fileRef = 205B64221B68E92D006F9664 /* TXSToets.m */; };
+		205B64251B68E993006F9664 /* Toets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205B64241B68E993006F9664 /* Toets.swift */; };
 		65834DE119AC599E0061AD3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65834DE019AC599E0061AD3F /* Foundation.framework */; };
 		65834DE319AC599E0061AD3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65834DE219AC599E0061AD3F /* CoreGraphics.framework */; };
 		65834DE519AC599E0061AD3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65834DE419AC599E0061AD3F /* UIKit.framework */; };
@@ -22,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		205B641A1B68E23C006F9664 /* TextSort-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TextSort-Bridging-Header.h"; sourceTree = "<group>"; };
+		205B641B1B68E249006F9664 /* MyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MyViewController.swift; path = ../../objc/TextSort/MyViewController.swift; sourceTree = "<group>"; };
+		205B64211B68E92D006F9664 /* TXSToets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TXSToets.h; sourceTree = "<group>"; };
+		205B64221B68E92D006F9664 /* TXSToets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TXSToets.m; sourceTree = "<group>"; };
+		205B64241B68E993006F9664 /* Toets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toets.swift; sourceTree = "<group>"; };
 		65834DDD19AC599E0061AD3F /* TextSort.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextSort.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65834DE019AC599E0061AD3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		65834DE219AC599E0061AD3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -61,6 +69,9 @@
 		65834DD419AC599E0061AD3F = {
 			isa = PBXGroup;
 			children = (
+				205B64241B68E993006F9664 /* Toets.swift */,
+				205B64211B68E92D006F9664 /* TXSToets.h */,
+				205B64221B68E92D006F9664 /* TXSToets.m */,
 				65D7FDF219AD0C730038F82F /* handwritten-objc */,
 				65834DE619AC599E0061AD3F /* TextSort */,
 				65834DDF19AC599E0061AD3F /* Frameworks */,
@@ -91,6 +102,7 @@
 		65834DE619AC599E0061AD3F /* TextSort */ = {
 			isa = PBXGroup;
 			children = (
+				205B641A1B68E23C006F9664 /* TextSort-Bridging-Header.h */,
 				65834DF219AC599E0061AD3F /* Main_iPhone.storyboard */,
 				65834DFB19AC599E0061AD3F /* Images.xcassets */,
 				65834DE719AC599E0061AD3F /* Supporting Files */,
@@ -118,6 +130,7 @@
 				65D7FDF719AD0CDF0038F82F /* TXSTextboxListenerImpl.m */,
 				65D7FDF819AD0CDF0038F82F /* TXSViewController.h */,
 				65D7FDF919AD0CDF0038F82F /* TXSViewController.m */,
+				205B641B1B68E249006F9664 /* MyViewController.swift */,
 			);
 			name = "handwritten-objc";
 			path = "../handwritten-src/objc";
@@ -190,8 +203,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				65D7FDFC19AD0CDF0038F82F /* TXSTextboxListenerImpl.m in Sources */,
+				205B64231B68E92D006F9664 /* TXSToets.m in Sources */,
 				65D7FDFB19AD0CDF0038F82F /* TXSAppDelegate.m in Sources */,
 				65D7FDFD19AD0CDF0038F82F /* TXSViewController.m in Sources */,
+				205B641C1B68E249006F9664 /* MyViewController.swift in Sources */,
+				205B64251B68E993006F9664 /* Toets.swift in Sources */,
 				65D7FDFA19AD0CDF0038F82F /* main.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -297,11 +313,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextSort/TextSort-Prefix.pch";
 				INFOPLIST_FILE = "TextSort/TextSort-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TextSort/TextSort-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -312,11 +332,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TextSort/TextSort-Prefix.pch";
 				INFOPLIST_FILE = "TextSort/TextSort-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/TextSort/TextSort-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
